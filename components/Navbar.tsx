@@ -12,12 +12,13 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <a className="font-semibold text-lg text-brand-500">Your Name</a>
+            <a className="font-semibold text-lg text-brand-500">PRATAP SOLAT</a>
           </Link>
           <Link href="/projects"><a className="text-sm text-slate-600 dark:text-slate-300">Projects</a></Link>
+          <Link href="/resume"><a className="text-sm text-slate-600 dark:text-slate-300">Resume</a></Link>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="/resume"><a className="px-3 py-1 border rounded text-sm">Resume</a></Link>
+          <a href="mailto:solatpratap@gmail.com" className="text-sm text-slate-600 dark:text-slate-300">solatpratap@gmail.com</a>
           <button
             aria-label="Toggle dark mode"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
