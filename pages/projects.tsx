@@ -14,6 +14,7 @@ import {
   ShieldAlert,
   Sparkles,
   ExternalLink,
+  Zap,
 } from 'lucide-react'
 
 export default function Projects() {
@@ -69,7 +70,7 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <section className="py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((p, idx) => (
             <ProjectCard
               key={p.id}
@@ -79,7 +80,7 @@ export default function Projects() {
               metric={p.metric}
               category={p.categoryLabel}
               image={p.image}
-              previewTone={idx === 0 ? 'violet' : idx === 1 ? 'cyan' : 'emerald'}
+              previewTone={idx % 3 === 0 ? 'violet' : idx % 3 === 1 ? 'cyan' : 'emerald'}
               onViewDetails={() => setSelectedProject(p)}
             />
           ))}
@@ -114,8 +115,10 @@ export default function Projects() {
                     {project.categoryLabel}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    {project.category === 'Full-Stack' ? (
+                    {project.categoryLabel.includes('Mobile') ? (
                       <Smartphone className="w-5 h-5 text-accent-cyan" />
+                    ) : project.categoryLabel.includes('Real-Time') ? (
+                      <Zap className="w-5 h-5 text-accent-cyan" />
                     ) : (
                       <Server className="w-5 h-5 text-accent-cyan" />
                     )}

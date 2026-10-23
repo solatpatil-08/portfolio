@@ -60,12 +60,12 @@ export const portfolioData = {
     {
       category: 'Backend & Core APIs',
       description: 'Designing robust services, RESTful endpoints, and enterprise business logic.',
-      skills: ['Java', 'Spring Boot', 'Hibernate', 'RESTful APIs', 'Node.js', 'Express', 'Python', 'Django'],
+      skills: ['Java', 'Spring Boot', 'Python', 'Django', 'Django Channels', 'WebSockets', 'RESTful APIs', 'Node.js'],
     },
     {
       category: 'Mobile & Data Systems',
       description: 'Cross-platform mobile apps and relational/document databases.',
-      skills: ['Flutter', 'Dart', 'MySQL', 'MongoDB', 'SQLite', 'JSON API Integration'],
+      skills: ['Flutter', 'Dart', 'MySQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'JSON API Integration'],
     },
     {
       category: 'Tools, Security & DevOps',
@@ -126,6 +126,40 @@ export const portfolioData = {
     { title: 'AI Skills Passport', provider: 'EY & Microsoft' },
   ],
   projects: [
+    {
+      id: 'algoquiz',
+      name: 'AlgoQuiz — Gamified Algorithm & Real-Time Coding Battle Arena',
+      category: 'Full-Stack',
+      categoryLabel: 'Full-Stack & Real-Time Web',
+      summary:
+        'A real-time competitive algorithm learning and 1v1 battle platform featuring live WebSocket match duels, time complexity profiling, and global ELO leaderboards.',
+      description:
+        'Engineered an interactive full-stack competitive coding platform that gamifies data structures and algorithm learning. Built with Django 5 and Django REST framework for backend business logic, and Django Channels with Daphne ASGI WebSockets to power real-time 1v1 coding duels, live matchmaking, interactive code test runners, time complexity analysis, and global ELO rating systems.',
+      challenge:
+        'Traditional coding platforms lack real-time peer engagement and live feedback loops, resulting in low learner retention and difficulty understanding algorithm runtime behavior under competitive constraints.',
+      solution:
+        'Architected a full-duplex WebSocket matchmaking system using Django Channels and ASGI event loops. Integrated dynamic challenge categories across Graph, DP, Trees, and Sorting with live opponent sync (<50ms latency), real-time round state machines, and automated ELO rating updates.',
+      stack: ['Python', 'Django', 'Django Channels', 'WebSockets', 'REST APIs', 'PostgreSQL', 'SQLite', 'JavaScript'],
+      keyFeatures: [
+        'Live 1v1 Battle Arena with bidirectional WebSocket state synchronization.',
+        'Comprehensive algorithmic challenge catalog (Graph, DP, Greedy, Trees, Sorting).',
+        'Real-time interactive code editor, test case runner, and complexity analyzer.',
+        'Dynamic global and weekly leaderboards with ELO rating and streak rewards.',
+        'Interactive performance analytics dashboard with topic mastery radar charts.',
+      ],
+      highlights: [
+        'Engineered bi-directional WebSockets achieving sub-50ms sync latency for live 1v1 head-to-head matches.',
+        'Designed modular Django REST endpoints handling auth, challenge submissions, and real-time leaderboards.',
+        'Implemented automated ELO matchmaking and round state machines with asynchronous timeout fallbacks.',
+      ],
+      metric: '<50ms Live Battle Sync Latency',
+      image: '/projects/algoquiz.jpg',
+      links: {
+        github: 'https://github.com/solatpatil-08',
+        statusNote: 'Full-Stack Platform (ASGI WebSocket Consumer Architecture & REST APIs).',
+        isProprietary: false,
+      },
+    },
     {
       id: 'digital-gatepass',
       name: 'Digital Gatepass Application',
@@ -226,11 +260,11 @@ export const portfolioData = {
     },
   ] as ProjectDetail[],
   services: [
-    'Full-stack web application development (React, Next.js, Java, Spring Boot)',
+    'Full-stack web application development (React, Next.js, Java, Spring Boot, Django)',
     'Responsive, accessible frontend engineering with TypeScript & Tailwind CSS',
-    'RESTful API architecture, design, and integration',
+    'RESTful API architecture, design, and real-time WebSockets integration',
     'Cross-platform mobile application development with Flutter',
-    'Database schema design, indexing, and optimization (MySQL, MongoDB)',
+    'Database schema design, indexing, and optimization (MySQL, PostgreSQL, MongoDB)',
   ],
   faqs: [
     {
@@ -248,9 +282,13 @@ export const portfolioData = {
         'spring',
         'flutter',
         'typescript',
+        'python',
+        'django',
+        'websockets',
+        'channels',
       ],
       answer:
-        'Pratap works across frontend, backend, mobile, and data. His primary technologies include React, Next.js, TypeScript, Java, Spring Boot, Node.js, RESTful APIs, Flutter, MySQL, and MongoDB.',
+        'Pratap works across frontend, backend, mobile, and real-time systems. His primary technologies include Java, Spring Boot, React, Next.js, TypeScript, Python, Django, Django Channels (WebSockets), RESTful APIs, Flutter, MySQL, PostgreSQL, and MongoDB.',
     },
     {
       id: 'projects',
@@ -261,12 +299,29 @@ export const portfolioData = {
         'portfolio projects',
         'built',
         'build',
+        'algoquiz',
+        'algoquest',
         'gatepass',
         'preschool',
         'attendance',
       ],
       answer:
-        'Pratap has built 3 key engineering projects: (1) Digital Gatepass Application (Flutter, Spring Boot, MySQL), (2) Pre-School Management System (React, Node.js, MongoDB), and (3) Online Attendance Tracking System (Python, Django). You can explore deep technical breakdowns on the Projects page.',
+        'Pratap has built 4 key engineering projects: (1) AlgoQuiz (Django, WebSockets, Python, PostgreSQL), (2) Digital Gatepass Application (Flutter, Spring Boot, MySQL), (3) Pre-School Management System (React, Node.js, MongoDB), and (4) Online Attendance Tracking System (Python, Django). You can explore deep technical breakdowns on the Projects page.',
+    },
+    {
+      id: 'algoquiz',
+      keywords: [
+        'algoquiz',
+        'algo quiz',
+        'algoquest',
+        'algo quest',
+        'algorithm quiz',
+        'algorithm',
+        'coding battle',
+        'battle',
+      ],
+      answer:
+        'AlgoQuiz is a full-stack gamified algorithm learning and 1v1 battle arena platform built with Django 5, Django Channels, WebSockets, and Django REST framework. It features real-time matchmaking, live dual-player code execution, <50ms sync latency, time complexity profiling, and global ELO leaderboards.',
     },
     {
       id: 'gatepass',

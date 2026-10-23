@@ -419,7 +419,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {portfolioData.projects.map((p, idx) => (
             <ProjectCard
               key={p.id}
@@ -429,7 +429,7 @@ export default function Home() {
               metric={p.metric}
               category={p.categoryLabel}
               image={p.image}
-              previewTone={idx === 0 ? 'violet' : idx === 1 ? 'cyan' : 'emerald'}
+              previewTone={idx % 3 === 0 ? 'violet' : idx % 3 === 1 ? 'cyan' : 'emerald'}
               onViewDetails={() => setSelectedProject(p)}
             />
           ))}

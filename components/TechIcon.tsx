@@ -24,9 +24,11 @@ import {
   SiHibernate,
   SiJsonwebtokens,
   SiAngular,
+  SiPostgresql,
+  SiRedis,
 } from 'react-icons/si'
 import { FaJava, FaCss3Alt } from 'react-icons/fa6'
-import { Code2, Server, Database, Workflow, ShieldCheck, Cpu } from 'lucide-react'
+import { Code2, Server, Database, Workflow, ShieldCheck, Cpu, Radio, Zap } from 'lucide-react'
 
 export interface TechMeta {
   label: string
@@ -73,6 +75,9 @@ export const techRegistry: Record<string, TechMeta> = {
   mysql: { label: 'MySQL', color: '#4479A1', icon: SiMysql, category: 'database' },
   mongodb: { label: 'MongoDB', color: '#47A248', icon: SiMongodb, category: 'database' },
   sqlite: { label: 'SQLite', color: '#003B57', icon: SiSqlite, category: 'database' },
+  postgresql: { label: 'PostgreSQL', color: '#336791', icon: SiPostgresql, category: 'database' },
+  postgres: { label: 'PostgreSQL', color: '#336791', icon: SiPostgresql, category: 'database' },
+  redis: { label: 'Redis', color: '#DC382D', icon: SiRedis, category: 'database' },
 
   // Tools & Security
   git: { label: 'Git', color: '#F05032', icon: SiGit, category: 'tool' },
@@ -81,6 +86,14 @@ export const techRegistry: Record<string, TechMeta> = {
   vercel: { label: 'Vercel', color: '#000000', icon: SiVercel, category: 'tool' },
   jwt: { label: 'JWT', color: '#D63AFF', icon: SiJsonwebtokens, category: 'tool' },
   'jwt authentication': { label: 'JWT Authentication', color: '#D63AFF', icon: SiJsonwebtokens, category: 'tool' },
+
+  // Real-time, APIs & Frameworks
+  'django channels': { label: 'Django Channels', color: '#092E20', icon: Zap, category: 'framework' },
+  channels: { label: 'Django Channels', color: '#092E20', icon: Zap, category: 'framework' },
+  websockets: { label: 'WebSockets', color: '#06B6D4', icon: Radio, category: 'concept' },
+  websocket: { label: 'WebSockets', color: '#06B6D4', icon: Radio, category: 'concept' },
+  'django rest framework': { label: 'Django REST Framework', color: '#A30000', icon: Server, category: 'framework' },
+  drf: { label: 'Django REST Framework', color: '#A30000', icon: Server, category: 'framework' },
 
   // Concepts / Architectural Protocols
   'restful apis': { label: 'RESTful APIs', color: '#38BDF8', icon: Server, category: 'concept' },
